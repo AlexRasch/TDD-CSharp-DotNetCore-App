@@ -5,20 +5,35 @@ namespace Calculater
     public class CalculatorTest
     {
         [Fact]
-        public void Test1()
+        public void Calculator_Sum_AddsTwoNumbers()
         {
             var calculator = new Calculator();
+            int left = 2;
+            int right = 2;
+            int expected = 4;
 
-            if(calculator.Sum(2, 2) != 4)
-            {
-                throw new Exception();
-            }
+            // Act
+            int actual = calculator.Sum(left, right);
 
-            if (calculator.Subtract(2, 2) != 0)
-            {
-                throw new Exception();
-            }
+            // Assert
+            Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void Calculator_Subtract_SubtractsTwoNumbers()
+        {
+            var calculator = new Calculator();
+            int left = 2;
+            int right = 2;
+            int expected = 0;
+
+            // Act
+            int actual = calculator.Subtract(left, right);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
 
     }
 }
