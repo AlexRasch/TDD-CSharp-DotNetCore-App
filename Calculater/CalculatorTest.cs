@@ -13,6 +13,11 @@ namespace Calculater
             {
                 throw new Exception();
             }
+
+            if (calculator.Subtract(2, 2) != 0)
+            {
+                throw new Exception();
+            }
         }
 
     }
