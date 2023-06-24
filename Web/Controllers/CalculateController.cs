@@ -17,15 +17,13 @@ namespace Web.Controllers
         [HttpGet("Add/{left}/{right}")]
         public int Add(int left, int right)
         {
-            var calculator = new Calculator();
-            return calculator.Sum(left, right);
+            return new Calculator().Sum(left, right);
         }
 
         [HttpGet("Subtract/{left}/{right}")]
         public int Subtract(int left, int right)
         {
-            var calculator = new Calculator();
-            return calculator.Subtract(left, right);
+            return new Calculator().Subtract(left, right);
         }
     }
 }
